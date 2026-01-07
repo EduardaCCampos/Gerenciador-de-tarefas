@@ -1,23 +1,24 @@
-📌 Gerenciador de Tarefas em Java
-✨ Visão Geral
+# 📌 Gerenciador de Tarefas em Java
 
-Este projeto é um sistema simples de gerenciamento de tarefas, desenvolvido em Java, com foco em Programação Orientada a Objetos (POO). Ele permite a criação de usuários, organização de tarefas, categorização e uma camada de gerenciamento geral.
+## ✨ Visão Geral
+
+Este projeto é um **sistema simples de gerenciamento de tarefas**, desenvolvido em **Java**, com foco em **Programação Orientada a Objetos (POO)**. Ele permite a criação de usuários, organização de tarefas, categorização e uma camada de gerenciamento geral.
 
 O objetivo principal do projeto é demonstrar conceitos fundamentais como:
 
-Encapsulamento
+* Encapsulamento
+* Herança
+* Interfaces
+* Listas dinâmicas (`ArrayList`)
+* Organização em pacotes
 
-Herança
+> 💡 Projeto acadêmico ideal para demonstrar base sólida em lógica, estruturação de classes e modelagem de domínio.
 
-Interfaces
+---
 
-Listas dinâmicas (ArrayList)
+## 🧱 Estrutura do Projeto
 
-Organização em pacotes
-
-💡 Projeto acadêmico ideal para demonstrar base sólida em lógica, estruturação de classes e modelagem de domínio.
-
-🧱 Estrutura do Projeto
+```
 Tarefadecasa/
 │
 ├── Usuario.java
@@ -25,107 +26,110 @@ Tarefadecasa/
 ├── Tarefa.java
 ├── Categoria.java
 ├── Usuarioi.java
-👤 Usuario
+```
+
+---
+
+## 👤 Usuario
 
 Representa um usuário comum do sistema.
 
-Responsabilidades
+### Responsabilidades
 
-Armazenar dados básicos do usuário (nome, email e senha)
+* Armazenar dados básicos do usuário (nome, email e senha)
+* Manter uma lista de tarefas
+* Adicionar, remover e atualizar tarefas
 
-Manter uma lista de tarefas
+### Atributos
 
-Adicionar, remover e atualizar tarefas
+* `nome`
+* `email`
+* `senha`
+* `listaDeTarefas`
 
-Atributos
+---
 
-nome
+## 🧑‍💼 Gerenciador
 
-email
+Herda da classe `Usuario` e representa um **usuário com privilégios administrativos**.
 
-senha
+### Responsabilidades
 
-listaDeTarefas
+* Gerenciar outros usuários do sistema
+* Adicionar, remover e buscar usuários
 
-🧑‍💼 Gerenciador
+### Conceitos aplicados
 
-Herda da classe Usuario e representa um usuário com privilégios administrativos.
+* Herança
+* Reutilização de código
 
-Responsabilidades
+---
 
-Gerenciar outros usuários do sistema
-
-Adicionar, remover e buscar usuários
-
-Conceitos aplicados
-
-Herança
-
-Reutilização de código
-
-✅ Tarefa
+## ✅ Tarefa
 
 Representa uma tarefa que pode ser atribuída a um usuário.
 
-Atributos
+### Atributos
 
-titulo
+* `titulo`
+* `descricao`
+* `prazo`
+* `concluida`
 
-descricao
+### Funcionalidades
 
-prazo
+* Marcar tarefa como concluída
+* Exibir informações da tarefa
 
-concluida
+---
 
-Funcionalidades
-
-Marcar tarefa como concluída
-
-Exibir informações da tarefa
-
-🗂️ Categoria
+## 🗂️ Categoria
 
 Permite agrupar tarefas por categoria.
 
-Responsabilidades
+### Responsabilidades
 
-Organizar tarefas por contexto
+* Organizar tarefas por contexto
+* Facilitar visualização e organização
 
-Facilitar visualização e organização
+### Exemplos de categorias
 
-Exemplos de categorias
+* Estudos
+* Trabalho
+* Casa
 
-Estudos
+---
 
-Trabalho
-
-Casa
-
-🔌 Interface Usuarioi
+## 🔌 Interface Usuarioi
 
 Define um contrato comum para classes que precisam implementar o método:
 
-visualizar()
+* `visualizar()`
 
-Isso reforça o uso de polimorfismo no projeto.
+Isso reforça o uso de **polimorfismo** no projeto.
 
-▶️ Como Rodar o Projeto
-Pré-requisitos
+---
 
-Java JDK 8 ou superior
+## ▶️ Como Rodar o Projeto
 
-IDE Java (IntelliJ, Eclipse, NetBeans) ou terminal
+### Pré-requisitos
 
-Passo a passo
+* Java JDK 8 ou superior
+* IDE Java (IntelliJ, Eclipse, NetBeans) ou terminal
 
-Clone o repositório:
+### Passo a passo
 
+1. Clone o repositório:
+
+```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
+```
 
-Abra o projeto na sua IDE
+2. Abra o projeto na sua IDE
 
-Crie uma classe Main.java para testar o sistema:
+3. Crie uma classe `Main.java` para testar o sistema:
 
+```java
 public class Main {
     public static void main(String[] args) {
         Usuario u = new Usuario("Eduarda", "edu@email.com", "123");
@@ -134,34 +138,40 @@ public class Main {
         System.out.println(u);
     }
 }
+```
 
-Execute o programa
+4. Execute o programa
 
-🚀 Possíveis Melhorias Futuras
+---
 
-Correção de métodos que recebem List ao invés de objetos individuais
+## 🚀 Possíveis Melhorias Futuras
 
-Implementação real do método visualizar()
+* Correção de métodos que recebem `List` ao invés de objetos individuais
+* Implementação real do método `visualizar()`
+* Persistência de dados (arquivo ou banco de dados)
+* Interface gráfica (Swing ou JavaFX)
+* Testes unitários
 
-Persistência de dados (arquivo ou banco de dados)
+---
 
-Interface gráfica (Swing ou JavaFX)
+## 🧠 Aprendizados Demonstrados
 
-Testes unitários
+* Modelagem de sistemas simples
+* Aplicação prática de POO
+* Organização de código em pacotes
+* Uso de listas dinâmicas
 
-🧠 Aprendizados Demonstrados
+---
 
-Modelagem de sistemas simples
+## 👩‍💻 Autora
 
-Aplicação prática de POO
-
-Organização de código em pacotes
-
-Uso de listas dinâmicas
-
-👩‍💻 Autora
-
-Eduarda Lima
+**Eduarda Lima**
 Estudante de Computação | Desenvolvimento de Sistemas | Análise de Dados
 
-"Código simples, bem estruturado e com propósito." ✨
+> "Código simples, bem estruturado e com propósito." ✨
+
+---
+
+## 📄 Licença
+
+Projeto de uso educacional.
